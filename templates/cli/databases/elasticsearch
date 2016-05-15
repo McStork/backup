@@ -1,0 +1,28 @@
+  ##
+  # Elasticsearch [Database]
+  #
+  database Elasticsearch do |db|
+    # To snapshot all indices, set `db.indice = :all` (or leave blank)
+    db.hosts = ['localhost:9200']
+    db.repository = 'my_repository'
+    db.indice = 'my_indice-'
+    db.timeout = 900
+    db.ignore_unavailable = false
+
+    db.flush = true
+    db.blocks_write = true
+    db.max_num_segments = 1 
+    
+    # Management of time-based indices
+    db.time_based = :DAILY
+    db.ago = 1
+    db.date_splitter = '-'
+    db.strict = true
+
+    # Client authentification and SSL
+    db.username = 'my_username'
+    db.password = 'my_password'
+    db.scheme = 'https'
+    db.validate_ssl = true
+    db.cacert = 'path_to_cert'
+  end

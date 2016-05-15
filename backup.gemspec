@@ -90,4 +90,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'unf', '= 0.1.3'
   gem.add_dependency 'unf_ext', '= 0.0.6'
   gem.add_dependency 'xml-simple', '= 1.1.4'
+  gem.add_dependency 'elasticsearch', '= 1.0.17'
 end

@@ -38,12 +38,14 @@ group :production do
   gem 'dogapi'
   gem 'aws-ses'
   gem 'qiniu', '~> 6.5.1'
+  gem 'elasticsearch', '= 1.0.17'
 end
 
 gem 'rspec'
 gem 'fuubar'
 gem 'mocha'
 gem 'timecop'
+gem 'webmock', '= 2.0.3'
 
 # Omitted from Travis CI Environment
 group :no_ci do
